@@ -1,0 +1,27 @@
+<h1 class="text-light">Power Meter PM01 <span class="mif-chart-bars place-right"></span></h1>
+<hr class="thin bg-grayLighter">
+<div class="tabcontrol" data-role="tabcontrol">
+  <ul class="tabs">
+    <li><a href="#hourly">Hourly</a></li>
+    <li><a href="#daily">Daily</a></li>
+    <li><a href="#monthly">Monthly</a></li>
+    <li><a href="#yearly">Yearly</a></li>
+  </ul>
+  <div class="frames">
+    <div class="frame" id="hourly" style="background-color: #ffffff;">
+      <div class="auto-size" style=" width: 1000px; margin: 0 auto;">
+        <canvas id="hourlyChart" data-power=<%= @pm_data.to_json %>></canvas>
+      </div>
+    </div>
+    <div class="frame" id="monthly" style="background-color: #ffffff;">
+      <div class="auto-size" style=" width: 1000px; margin: 0 auto;">
+        <canvas id="monthlyChart"></canvas>
+      </div>
+    </div>
+    <div class="frame" id="yearly" style="background-color: #ffffff;">
+      <div class="auto-size" style=" width: 1000px; margin: 0 auto;">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="dim-screen bg-darkTeal">
+  <div class="login-form padding20 block-shadow">
+    <%= form_for @user_session, url: login_path do |f| %>
+      <h1 class="text-light">Login to Service</h1>
+      <hr class="thin">
+      <br>
+      <div class="input-control text full-size" data-role="input">
+        <%= f.email_field :email, placeholder: 'Your email address' %>
+      </div>
+      <div class="input-control text full-size" data-role="input">
+        <%= f.password_field :password, placeholder: 'Your password' %>
+      </div>
+      <br><br>
+      <div class="form-actions">
+        <%= f.submit 'Login', class: 'button primary'%>
+      </div>
+    <% end %>
+  </div>
+</div>
