@@ -1,1 +1,19 @@
-$('#diagram').html('<%= j render('diagram') %>');
+$.getJSON('http://app.inetscada.com:8080/api/sp_GetCurrentPM01_data_Result', function(data) {
+  $('text#dg81')[0].innerHTML = Math.abs((Math.round(data.total_Active_Power * 1000) / 1000)) + ' kW';
+  $('text#dg82')[0].innerHTML = (Math.round(data.total_Apparent_Power * 1000) / 1000) + ' kVA';
+});
+
+$.getJSON('http://app.inetscada.com:8080/api/sp_GetCurrentPM02_data_Result', function(data) {
+  $('text#dg61')[0].innerHTML = Math.abs((Math.round(data.total_Active_Power * 1000) / 1000)) + ' kW';
+  $('text#dg62')[0].innerHTML = (Math.round(data.total_Apparent_Power * 1000) / 1000) + ' kVA';
+});
+
+$.getJSON('http://app.inetscada.com:8080/api/sp_GetCurrentPM03_data_Result', function(data) {
+  $('text#ems1')[0].innerHTML = Math.abs((Math.round(data.total_Active_Power * 1000) / 1000)).toFixed(3) + ' kW';
+  $('text#ems2')[0].innerHTML = (Math.round(data.total_Apparent_Power * 1000) / 1000).toFixed(3) + ' kVA';
+});
+
+$.getJSON('http://app.inetscada.com:8080/api/sp_GetCurrentPM04_data_Result', function(data) {
+  $('text#r1')[0].innerHTML = (Math.round(data.total_Active_Power * 1000) / 1000).toFixed(3) + ' kW';
+  $('text#r2')[0].innerHTML = (Math.round(data.total_Apparent_Power * 1000) / 1000).toFixed(3) + ' kVA';
+});

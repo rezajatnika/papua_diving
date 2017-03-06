@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Reza Jatnika/Documents/GitHub/papua_diving","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/vagrant":{"mount_options":["dmode=775,fmode=644"],"guestpath":"/vagrant","hostpath":"C:/Users/Reza Jatnika/Documents/GitHub/papua_diving","disabled":false,"__vagrantfile":true}}}

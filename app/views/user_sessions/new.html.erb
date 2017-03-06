@@ -1,19 +1,10 @@
-<div class="dim-screen bg-darkTeal">
-  <div class="login-form padding20 block-shadow">
-    <%= form_for @user_session, url: login_path do |f| %>
-      <h1 class="text-light">Login to Service</h1>
-      <hr class="thin">
-      <br>
-      <div class="input-control text full-size" data-role="input">
-        <%= f.email_field :email, placeholder: 'Your email address' %>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4 flex-center-vertical">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h1 class="page-header">Login to Service</h1>
+        <%= render 'form' %>
       </div>
-      <div class="input-control text full-size" data-role="input">
-        <%= f.password_field :password, placeholder: 'Your password' %>
-      </div>
-      <br><br>
-      <div class="form-actions">
-        <%= f.submit 'Login', class: 'button primary'%>
-      </div>
-    <% end %>
+    </div>
   </div>
 </div>

@@ -4,15 +4,12 @@ class HomeController < ApplicationController
   before_action :require_login
 
   def index
-    @pm_data = get_data
+    # ...
   end
 
-  def overview
-    @pm01 = 6
-    @pm02 = 0
+  def pm60kv
+    # ...
   end
-
-  def login; end
 
   private
 

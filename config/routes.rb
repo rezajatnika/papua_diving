@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   # Homepage
-  root 'home#overview'
+  root 'home#index'
+
+  # Trend 60 kVA
+  scope module: 'power_meter60' do
+    get 'hourly', to: 'power_meter60#hourly'
+  end
 
   # Login  page
   delete 'logout',   to: 'user_sessions#destroy'

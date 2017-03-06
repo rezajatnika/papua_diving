@@ -6,45 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
-  <body>
-    <% unless current_page?(controller: 'user_sessions', action: 'new') %>
-      <%= render 'layouts/navbar' %>
-    <% end %>
-    <div class="page-content">
-      <div class="flex-grid" style="height: 100%;">
-        <div class="row" style="height: 100%;">
-          <div class="cell size-x200" id="cell-sidebar" style="background-color: #71b1d1;">
-            <ul class="sidebar">
-              <li class="active">
-                <a href="#">
-                  <span class="mif-chart-bars icon"></span>
-                  <span class="title">Overview</span>
-                  <span class="counter">System Architecture Visualization</span>
-                </a>
-              </li>
-              <li class="passive">
-                <a href="#">
-                  <span class="mif-chart-bars icon"></span>
-                  <span class="title">Power Meter</span>
-                  <span class="counter">60 kVA</span>
-                </a>
-              </li>
-              <li class="passive">
-                <a href="#" disabled="true">
-                  <span class="mif-chart-bars icon"></span>
-                  <span class="title">Power Meter</span>
-                  <span class="counter">80 kVA</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="cell auto-size padding20 bg-white" id="cell-content">
-            <%= yield %>
-          </div>
-        </div>
+  <body id="content">
+    <%= render 'home/shared/navbar'%>
+    <div id="wrapper">
+      <%= render 'home/shared/sidebar' %>
+      <div id="page-content-wrapper">
+        <%= yield %>
       </div>
     </div>
   </body>

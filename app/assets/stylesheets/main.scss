@@ -1,0 +1,27 @@
+$cloud: #ecf0f1;
+$cloud-font: #34495e;
+
+body {
+  background: $cloud;
+  margin-top: 50px;
+}
+
+h1.page-header {
+  margin-top: 0;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.flex-center-vertical {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 453px;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  background: $cloud;
+}
